@@ -48,6 +48,8 @@ class Portfoilo(models.Model):
     text = models.CharField(max_length=50)
     job = models.CharField(max_length=50)
     date = models.DateField(default=1, null =True,blank=True)
+    client = models.CharField(max_length=50)
+    subtitle = models.TextField(max_length=10000)
     def __str__(self):
         return self.title      
 

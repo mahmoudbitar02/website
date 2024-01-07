@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from home.views import home
+from home.views import home, detail_portofolio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home)
+    path('',home),
+    path('details/<int:id>', detail_portofolio)
 ]
 
 
